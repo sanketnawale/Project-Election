@@ -1,0 +1,60 @@
+# %% navigation and starting
+from selenium import webdriver
+import time
+driver = webdriver.Chrome(executable_path="chromedriver.exe")
+
+driver.get("https://masterprograming.com/")
+print(driver.title)
+time.sleep(2)
+driver.get("https://google.com/")
+print(driver.title)
+time.sleep(5)
+
+
+print(driver.title)
+driver.back()
+
+print(driver.title)
+driver.forward()
+
+
+#driver.maximize_window()
+#driver.minimize_window()
+driver.quit()
+
+# %% conditional
+from selenium import webdriver
+import time
+driver = webdriver.Chrome(executable_path="chromedriver.exe")
+
+driver.get("https://masterprograming.com/contact-us/")
+
+time.sleep(25)
+var = driver.find_element("class name", "search-field") #driver.find_element_By_class_name("search-field")
+
+# is_displayed()
+print(var.is_displayed())
+
+# is _enabled()
+var2 = driver.find_element("name", "s")
+print(var2.is_enabled())
+# is_selected()
+
+driver.quit()
+
+
+# %%conditiona;
+from selenium import webdriver
+import time
+driver = webdriver.Chrome(executable_path="chromedriver.exe")
+
+driver.get("https://w3schools.com/html/html_forms.asp")
+
+var = driver.find_element("id","html")
+print(var.is_selected())
+
+var2 = driver.find_element("name","fav_language")
+print(var2.is_selected())
+driver.quit()
+
+
